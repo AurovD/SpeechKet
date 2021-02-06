@@ -19,6 +19,7 @@ const toAudio = async (body) => {
     });
     let msg = await res.json();
     if(msg.msg === 200) {
+        console.log("done")
         let a = document.querySelector(".download");
         let p = document.querySelector(".downloadBox");
         p.style.opacity = "1";
@@ -38,7 +39,6 @@ const toText = async (body) => {
         },
         body: body
     });
-    console.log(res)
     let msg = await res.json();
     if(msg.msg === 200) {
         genText.innerText = `${msg.text}`;
