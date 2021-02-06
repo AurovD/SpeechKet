@@ -56,7 +56,7 @@ router.post("/audio", upload.single("file"), async (req, res) => {
         params.append('sampleRateHertz', '16000');
         params.append('format', 'oggopus');
         try {
-            let respond = await fetch('https://stt.api.cloud.yandex.net/speech/v1/stt:recognize?topic=general&lang=ru-RU&format=oggopus', {
+            let respond = await fetch('https://stt.api.cloud.yandex.net/speech/v1/stt:recognize?topic=general&lang=ru-RU&format=lpcm&sampleRateHertz=48000', {
                 method: 'POST',
                 headers: {
                     'Authorization': 'Api-Key ' + token,
