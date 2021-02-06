@@ -23,7 +23,7 @@ const toAudio = async (body) => {
         let a = document.querySelector(".download");
         let p = document.querySelector(".downloadBox");
         p.style.opacity = "1";
-        a.setAttribute("href", './file/voice.ogg');
+        a.setAttribute("href", './file/voice.wav');
         message.innerText = "Готово! Нажми скачать";
         setTimeout(() => {
             message.innerText = "от 3 до 300 символов";
