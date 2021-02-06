@@ -49,15 +49,19 @@ const toText = async (body) => {
 formText.addEventListener("submit", e => {
     e.stopPropagation();
     e.preventDefault();
-    if(text.value.length >= 3 || text.value.length >= 300){
-        let body = {
-            text: text.value,
+    if(/[а-я]/i.test(text.value)) {
+        if(text.value.length >= 3 || text.value.length >= 300){
+            let body = {
+                text: text.value,
+            }
+            toAudio(body);
+        } else if (text.value.length < 3) {
+            message.innerText = "Слишком короткий текст"
+        } else if (text.value.length > 300) {
+            message.innerText = "Слишком длинный текст"
         }
-        toAudio(body);
-    } else if (text.value.length < 3) {
-        message.innerText = "Слишком короткий текст"
-    } else if (text.value.length > 300) {
-        message.innerText = "Слишком длинный текст"
+    } else {
+        message.innerText = "Пишите на русском"
     }
 })
 formAudio.addEventListener("submit", e => {
