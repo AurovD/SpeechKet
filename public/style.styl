@@ -1,0 +1,166 @@
+*
+  margin 0
+  padding 0
+  font-family "Roboto", sans-serif
+.wrapper
+  display grid
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 70px auto;
+  width 100vw
+  height 100vh
+header {
+  grid-column: 1 / 3;
+  padding-left 80px
+}
+header
+  display flex
+  align-items center
+  img
+    width 180px
+  h1
+    font-size 50px
+    margin-left 30px
+.column
+  display flex
+  padding 80px 80px
+  flex-direction column
+.title
+  position relative
+  display flex
+  align-items center
+  justify-content center
+  width 300px
+  height 50px
+  transform skew(20deg)
+  background-color rgb(255, 204, 0)
+  box-shadow 5px 10px 10px rgba(0,0,0,0.5)
+  margin-bottom 40px
+
+.title_text
+  transform skew(-20deg)
+  color #fff
+.converter
+  width 400px
+  display flex
+  align-items flex-end
+  flex-direction column
+.input__textareaBox
+  background-color #443AF0
+  display flex
+  justify-content space-between
+  flex-direction column
+  padding 20px
+  border-radius 10px
+  height 260px
+  width 400px
+  box-shadow 5px 10px 10px rgba(0,0,0,0.5)
+  margin-bottom  30px
+  box-sizing border-box
+.input__button
+  display flex
+  justify-content space-between
+  align-items center
+  p
+    color white
+    font-size 12px
+textarea
+  width 100%
+  resize none
+  outline none
+  padding 10px
+  box-sizing border-box
+  box-shadow 5px 5px 10px rgba(0,0,0,0.5) inset
+  border-radius 5px
+.input__textareaBox
+  button
+    width 150px
+    height 40px
+    background-color white
+    border none
+    outline none
+    box-shadow 5px 5px 10px rgba(0,0,0,0.5) inset
+    border-radius 5px
+    position relative
+.input__textareaBox button::before
+  content ""
+  position absolute
+  top 0
+  left -60px
+  width 40px
+  height 40px
+  background url("./img/convert.svg")
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+.downloadBox
+  background-color #443AF0
+  opacity 0
+  border-radius 10px
+  height 40px
+  width 150px
+  box-shadow 5px 10px 10px rgba(0,0,0,0.5)
+  display flex
+  justify-content center
+  align-items center
+  transition opacity 2s ease-out
+a
+  color white
+  text-decoration none
+.input__fileBox
+  width: 100%
+  position: relative
+  margin-left 15px
+  text-align: center
+  display flex
+  flex-direction column
+  margin-bottom 30px
+.input__file
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  box-shadow 5px 10px 10px rgba(0,0,0,0.5)
+.input__file-button
+  width: 100%
+  max-width: 290px
+  height: 60px
+  background-color #443AF0
+  color: #fff
+  font-size: 1.125rem
+  font-weight: 700
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  border-radius: 3px
+  cursor: pointer
+  margin-bottom 40px
+  box-shadow 5px 10px 10px rgba(0,0,0,0.5)
+.input__file-icon-wrapper
+  height: 60px
+  width: 60px
+  margin-right: 15px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-right: 1px solid #fff
+.input__file-button-text
+  line-height 1
+  margin-top 1px
+.input__fileBox
+  button
+    outline none
+    border none
+    width 200px
+    height 60px
+    border-radius 10px
+    background #e0e0e0
+    box-shadow  10px 10px 20px #bebebe, -10px -10px 20px #ffffff
+.text
+  padding 15px
+  margin-left 15px
+  color black
+  width 300px
+  height 200px
+  border-radius 10px
+  background #e0e0e0
+  box-sizing border-box
+  box-shadow  10px 10px 20px #bebebe, -10px -10px 20px #ffffff

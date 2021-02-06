@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>SpeechKit</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="./img/yandex.png" alt="logo">
+            <h1>CONVERTER</h1>
+        </header>
+        <div class="column">
+            <div class="title">
+                <h2 class="title_text">Text to Audio</h2>
+            </div>
+            <div class="converter">
+                <form action="/api/text" method="POST" enctype="multipart/form-data">
+                    <div class="input__textareaBox">
+                        <textarea name="text" rows="8" cols="50" placeholder="Напишите текст на русском" maxlength="300"></textarea>
+                        <div class="input__button">
+                            <p class="input__msg">от 3 до 300 символов</p>
+                            <button type="submit">Конвертировать</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="downloadBox">
+                    <a href="" class="download" download="zahar">Скачать</a>
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="title">
+                <h2 class="title_text">Audio to Text</h2>
+            </div>
+            <form action="/audio" method="POST" enctype="multipart/form-data">
+                <div class="input__fileBox">
+                    <input name="file" type="file" name="file" id="input__file" name="file" class="input input__file">
+                    <label for="input__file" class="input__file-button">
+                        <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./img/upload.png" alt="Выбрать файл" width="25"></span>
+                        <span class="input__file-button-text">Выберите файл OGG</span>
+                    </label>
+                    <button type="submit">Конвертировать</button>
+                </div>
+            </form>
+            <p class="text">Здесь будет текст</p>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
